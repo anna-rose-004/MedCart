@@ -1,0 +1,388 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4a1f3e2;
+  margin: 50px;
+  padding: 0;
+  color : #d48dce;
+}
+
+.nsdashboard-container {
+  padding: 0; /* Remove padding around the container */
+  margin: 0; /* Ensure no margin is applied */
+}
+
+.nsda-header {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.nsda-header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
+}
+
+.nsda-header button {
+  position: absolute; /* Position the button absolutely within the header */
+  top: 50%; /* Align vertically */
+  right: 20px; /* Add some space from the right edge */
+  transform: translateY(-50%); /* Center the button vertically */
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+.nsdashboard {
+  display: flex;
+  justify-content: flex-end; 
+  padding: 10px 20px;
+ 
+ 
+}
+
+.real-time-monitoring , .QRCode2,.QRCode1 , .cartid  {
+  
+     
+      background: rgb(255, 255, 255);
+      color: rgb(27, 14, 14);
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(231, 231, 236, 0.7);
+      font-size: 14px;
+      text-align: left;
+      position: absolute;
+     margin-right: 210px;
+     
+}
+.real-time-monitoring {
+  top: 90px; 
+  right: 40px;
+  width: 370px;
+}
+.real-time-monitoring h2{
+  font-size: 20px;
+}
+
+.cartid {
+  position: absolute;
+  top: 90px; 
+  left: 300px;
+  width: 220px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* QR Code Sections */
+.QRCode1, .QRCode2 {
+  position: absolute;
+  top: 90px;
+  width: 220px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.QRCode1 {
+  left: 550px; 
+  cursor: pointer; 
+    user-select: none; 
+    transition: transform 0.1s ease-in-out;
+}
+
+.QRCode2 {
+  right: 450px; 
+  cursor: pointer; 
+    user-select: none; 
+    transition: transform 0.1s ease-in-out;
+}
+
+.QRCode2, .QRCode1:active {
+  transform: scale(0.98); 
+}
+
+/* Status Container */
+.status-container {
+  display: flex; 
+  justify-content: flex-start; 
+  gap: 10px; 
+  margin-top: 10px;
+}
+
+
+
+/* Expiring Items, Stock, and Recalled Products */
+.expiring-items, .stock, .recalled-product {
+  background: #ffffff;
+  color: #333;
+ 
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 80px; 
+}
+
+/* Hover Effect */
+.expiring-items:hover, .stock:hover, .recalled-product:hover {
+  transform: scale(1.1);
+  background-color: #f8f9fa;
+}
+
+/* Number Styling */
+.expiring-items h3, .stock h3, .recalled-product h3 {
+  font-size: 24px;
+  margin: 0;
+  color: #ee1b10;
+}
+
+.stock h3{
+  font-size: 24px;
+  margin: 0;
+  color: #09e275;
+}
+
+.recalled-product h3 {
+  font-size: 24px;
+  margin: 0;
+  color: #eea010;
+}
+
+/* Text Styling */
+.expiring-items p, .stock p, .recalled-product p {
+  font-size: 14px;
+  margin: 5px 0 0;
+  font-weight: bold;
+}
+.cartid h2 {
+  font-size: 24px;
+  display: flex;
+  align-items: center; 
+  gap: 8px; 
+  color: cadetblue;
+}
+
+.cartid{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  justify-content: center;
+  text-align: center;
+  color: cadetblue;
+}
+
+.dep {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6b2743; 
+}
+
+.material-symbols-outlined {
+  font-size: 24px; 
+  vertical-align: middle;
+  text-align: center; 
+}
+
+
+.nsinventory-table h2 {
+  text-align: left;
+  margin-bottom: 15px;
+  color: #4E4E4E;
+}
+
+.nsinventory-record {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  color:#333;
+}
+
+.nssidebar {
+  width: 250px;
+  margin-top:0px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 55px;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+}
+
+/* Sidebar Menu */
+.nssidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nssidebar li {
+  padding: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.nssidebar li:last-child {
+  border-bottom: none;
+}
+
+.nssidebar li:hover {
+  background-color: #34495e;
+  color: #f1c40f;
+}
+
+.qr{
+  font-size: 19px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+
+/* Search Bar Container */
+.nsinventory-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto 10px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Search Input Field */
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+/* Focus Effect */
+#searchInput:focus {
+  border-color: #427ec3;
+  outline: none;
+}
+
+/* Inventory Table */
+.nsinventory-table {
+  position: absolute;
+  top: 300px; 
+  right: 50px;
+  left: 300px;
+  width: auto; 
+  padding: 20px;
+  background: rgb(229, 229, 229);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-width: 1130px;
+}
+
+/* Inventory Table Header */
+.nsinventory-row.header {
+  font-weight: bold;
+  background: #4e4e4e;
+  color: white;
+  padding: 10px;
+}
+
+/* Individual Rows */
+.nsinventory-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+/* Hover Effect */
+.nsinventory-row:hover {
+  background: #f1f1f1;
+}
+
+/* Column Formatting */
+.nscolumn {
+  flex: 1;
+  padding: 5px;
+  text-align: center;
+}
+
+/* First Column Alignment */
+.nscolumn.name {
+  text-align: left;
+  flex: 2;
+}
+  
+/* 🟢 Responsive Design */
+@media screen and (max-width: 992px) {
+  .nsdashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .nssidebar {
+    width: 0;
+    overflow: hidden;
+  }
+
+  .nsdashboard-header {
+    left: 0;
+    width: 100%;
+  }
+
+  .real-time-monitoring, .QRCode1, .QRCode2, .cartid {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nssidebar {
+    display: none;
+  }
+}

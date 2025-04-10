@@ -1,0 +1,182 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f3f0f7; /* Light lavender background */
+}
+
+/* Section Styles */
+.section {
+  padding: 60px 20px; /* Adjusted padding for correct positioning */
+  background-color: #fff;
+  display: none;
+  margin-top: 80px; /* Allow space for fixed navbar */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.prcontainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+  background-color: aliceblue;
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-size: 24px;
+}
+
+/* Contact Us Section Styles */
+.contact-title {
+  font-size: 28px;
+  color: #5e4b8b; /* Dark lavender */
+  font-weight: bold;
+  text-align: center;
+  line-height: 0.5;
+  margin-bottom: 30px;
+}
+
+.contact-description {
+  font-size: 18px;
+  color: #7f6fa4; /* Medium lavender */
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-icon {
+  text-align: center;
+  font-size: 50px;
+  color: #9b7dff; /* Lavender color for icon */
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+}
+
+.contact-info {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-info h4 {
+  font-size: 28px;
+  color: #5e4b8b; /* Dark lavender */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  color: #7f6fa4; /* Medium lavender */
+  line-height: 1.6;
+}
+
+.contact-form {
+  width: 100%;
+  font-size: 28px;
+  color: #5e4b8b;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-element {
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.form-control {
+  width: 60%;
+  padding: 12px;
+  font-size: 15px;
+  border: 2px solid #9b7dff; /* Lavender border */
+  border-radius: 4px;
+  background-color: transparent;
+  color: #5e4b8b; /* Dark lavender text */
+  transition: all 0.3s;
+}
+
+.form-control::placeholder {
+  color: #7f6fa4; /* Medium lavender */
+}
+
+.form-control:focus {
+  border-color: #7f6fa4; /* Medium lavender border on focus */
+  outline: none;
+}
+
+.btn-submit {
+  background-color: #9b7dff; /* Lavender button */
+  color: white;
+  font-size: 15px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #7f6fa4; /* Medium lavender hover */
+}
+
+.fas {
+  margin-right: 10px;
+}
+
+/* Map Section */
+.map {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column;
+      margin-top: 60px;
+  }
+
+  .navbar ul li {
+      margin: 10px 0;
+  }
+
+  .container {
+      padding: 15px;
+  }
+
+  .form-control {
+      width: 80%; /* Make form inputs wider on smaller screens */
+  }
+
+  .oval {
+      width: 90%; /* Make oval slightly wider on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-control {
+      width: 100%; /* Full-width form inputs on very small screens */
+  }
+
+  .oval {
+      width: 100%; /* Full-width oval on very small screens */
+  }
+}

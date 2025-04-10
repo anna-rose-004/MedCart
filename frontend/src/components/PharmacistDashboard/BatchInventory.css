@@ -1,0 +1,86 @@
+.binventory-container {
+  width: 80%;
+  margin: 30px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.btitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.binventory-table {
+  width: 100%; /* Adjust width as needed */
+  left: 300px;
+  right: 200px;
+  top: 100px;
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.binventory-table th, 
+.binventory-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.binventory-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.binventory-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.binventory-table tbody tr:hover {
+  background-color: #ddd;
+}
+.details{
+  color: rgb(38, 18, 57);
+  font-weight: bold;
+}
+
+/* Expiry Date Colors */
+.expiry-date {
+  font-weight: bold;
+}
+
+.expired {
+  background-color: #ff4d4d;
+  color: white;
+}
+.expiry-text {
+  font-weight: bold;
+}
+.expired-icon {
+  color: red;
+  margin-left: 5px;
+}
+
+.expiring-soon {
+  background-color: #ffa500;
+  color: white;
+}
+
+.expiry-text {
+  font-weight: bold;
+}
+
+/* Only text will be colored */
+.expiry-red {
+  color: red;
+}
+
+.expiry-orange {
+  color: orange;
+}
+
+.expiry-green {
+  color: green;
+}
+

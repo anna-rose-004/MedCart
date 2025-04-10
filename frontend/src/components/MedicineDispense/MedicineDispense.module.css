@@ -1,0 +1,249 @@
+/* Professional Styling */
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f3f3f3, #e0e0ff);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+.medicineList {
+  list-style: none;
+  padding: 0;
+}
+
+.medicineItem {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #444;
+}
+
+.noMedicine {
+  color: #888;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* ✅ Button Styling */
+.buttonGroup {
+  margin-top: 20px;
+}
+
+.button, .primaryButton {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button {
+  background: #e0e0e0;
+  color: #333;
+  margin-right: 10px;
+}
+
+.primaryButton {
+  background: #28a745; /* ✅ Green Button */
+  color: #fff;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #d6d6d6;
+}
+
+.primaryButton:hover {
+  background: #218838; /* ✅ Darker Green on Hover */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+}
+
+.fetchButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #fbbf24; /* Yellow */
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* ✅ Patient Details Box */
+.patientDetails {
+  background: rgba(28, 26, 26, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.card {
+  background: linear-gradient(135deg, #f3f3f3, #e0e0ff); /* Gradient */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+  color: rgb(29, 26, 26);
+}
+
+.bcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* ✅ Billing Card */
+.bcard {
+  background: linear-gradient(135deg, #f3f3f3, #e0e0ff);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+  color: rgb(23, 21, 21);
+}
+
+/* ✅ Title */
+.btitle {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* ✅ Info Section */
+.infoSection {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* ✅ Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+/* ✅ Table Header */
+.table th {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px;
+  text-align: left;
+}
+
+/* ✅ Table Rows */
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ✅ No Medicines */
+.noMedicines {
+  text-align: center;
+  padding: 10px;
+  color: #ffcc00;
+}
+
+/* ✅ Total Price */
+.totalPrice {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/*DispensedHistory.css*/
+.dcontainer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f9f9f9, #e3f2fd);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dtitle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dfilterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+dinput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dsearchButton {
+  background-color: #1976d2;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dsearchButton:hover {
+  background-color: #1565c0;
+}
+
+.dtable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.dtable th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.dtable th {
+  background-color: #64b5f6;
+  color: white;
+}
+
+.dnoData {
+  text-align: center;
+  color: red;
+}

@@ -1,0 +1,121 @@
+.expiring-medicines-container {
+  padding: 20px;
+  width: 100vw;  /* Full viewport width */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(246, 250, 252); /* Matching your page background */
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.expiring-medicines-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+  top: 20px;
+}
+
+.expiring-table {
+  width: 80%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  color:#151415;
+}
+
+.expiring-table th, 
+.expiring-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.expiring-table th {
+  background-color: #358339 !important; /* Dark Green */
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.expiring-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.expiring-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.expired-icon {
+  color: red;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.expiry-red {
+  color: red;
+}
+.qrcode-page{
+  background-color: #d7edff;
+}
+
+.expiring-table th, .expiring-table td {
+  padding: 10px;
+  border: 1px solid #151415;
+  text-align: center;
+}
+
+.expiring-table th {
+  background-color: #f4f4f4;
+}
+
+.remove-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove-btn:hover {
+  background-color: #d63030;
+}
+/* Ensure only expiry date text changes color */
+.expiring-table td.expiry {
+  font-weight: bold;
+  background-color: transparent !important; /* Remove background color */
+  padding: 8px;
+}
+
+/* Reset row background */
+.expiring-table tr {
+  background-color: transparent !important;
+}
+
+.expiry {
+  font-weight: bold;
+}
+
+.expiry-red {
+  color: red !important;
+}
+
+.expiry-orange {
+  color: orange !important;
+}
+
+.expiry-yellow {
+  color: yellowgreen !important; /* Change yellow to gold for better visibility */
+}
+
+.expiry-normal {
+  color: green !important;
+}
+

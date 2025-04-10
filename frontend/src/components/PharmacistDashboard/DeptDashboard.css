@@ -1,0 +1,45 @@
+.dashboard-container {
+  text-align: center;
+  padding: 0px;
+}
+
+.department-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.department-card {
+  background: #688eb8;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.department-card:hover {
+  background: #376495;
+}
+
+.department-detail {
+  text-align: center;
+  padding: 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #36618f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}

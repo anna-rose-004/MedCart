@@ -1,0 +1,618 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ndashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+.nda-header {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nda-header h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.nda-header button {
+  margin-right: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.count-badge {
+  display: inline-block;
+ /* Red background for emphasis */
+  color: rgb(224, 93, 93);
+  font-size: 1.2 rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 8px; /* Space between the icon/text and the badge */
+}
+
+/* Sidebar */
+/* Sidebar Buttons */
+.nsidebar {
+  width: 250px;
+  margin-top:0px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 55px;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+}
+
+/* Sidebar Menu */
+.nsidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nsidebar li {
+  padding: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.nsidebar li:last-child {
+  border-bottom: none;
+}
+
+.nsidebar li:hover {
+  background-color: #34495e;
+  color: #f1c40f;
+}
+.nlogout:hover{
+  color: red;
+  background-color: #34495e;
+}
+
+
+/* Main Content (Fixed Responsive) */
+.nmain-content {
+  position: absolute;
+  top: 60px; /* Below header */
+  left: 250px; /* Right next to the sidebar */
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  background-color: #f3f4f6;
+  overflow-y: auto;
+}
+
+/* Dashboard Title */
+.ndashboard-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* Center Profile Button in the First Row */
+.ndashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr)); /* 3 columns */
+  gap: 20px;
+  justify-content: center;
+  align-items: center; /* Ensure vertical centering */
+  text-align: center;
+  width: 100%;
+  max-width: 800px; /* Limit width to prevent excessive spacing */
+  margin: auto; /* Center the grid */
+}
+
+
+/* Profile button centered in the first row */
+.ndashboard-btn.profile {
+  grid-column: 1 / span 3; /* Make profile button span the full width */
+  justify-self: center;
+  align-self: center;}
+
+  .profile {
+    margin-left: -70px; /* Moves the button 20px left */
+  }
+  
+
+
+/* Remaining buttons should follow the grid structure */
+.ndashboard-btn:not(.profile) {
+  grid-column: auto; /* Ensures normal placement */
+}
+
+
+/* Regular Dashboard Button */
+.ndashboard-btn {
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 180px;
+  height: 135px; /* Maintain 4:3 ratio */
+  text-align: center;
+  font-size: 16px;
+  color:black;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover Effect */
+.ndashboard-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nbtn-icon {
+  margin-right: 8px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Chat Button */
+.nchat-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.nchat-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: blink 1.5s infinite; 
+}
+
+.nchat-button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+}
+
+/* Chat Window */
+/* Chat Window */
+.nchat-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 340px;
+  height: 450px;
+  background-color: #F3F4F6;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+  z-index: 1000;
+}
+
+/* Chat Header */
+.nchat-header {
+  background-color: #004494;
+  color: white;
+  padding: 12px 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Blinking Animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.nclose-chat {
+  animation: blink 1s infinite;
+}
+
+.nchat-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nclose-chat {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nclose-chat:hover {
+  color: #f8f9fa;
+}
+
+/* Chat Body */
+.nchat-body {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  font-size: 14px;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Chat Messages */
+.nchat-message {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.nchat-message.agent {
+  align-self: flex-start;
+  background-color: #E5E7EB;
+  color: #333333;
+  border-radius: 8px 8px 8px 2px;
+}
+
+.nchat-message.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px 8px 2px 8px;
+}
+
+/* Chat Footer */
+.nchat-footer {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #D1D5DB;
+  background-color: #FFFFFF;
+}
+
+.nchat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.nchat-footer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.nchat-footer button:hover {
+  background-color: #004494;
+}
+
+.inventory-container {
+  max-width: 1000px; /* Increased width */
+  margin: auto;
+  text-align: center;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.inventory-table {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto; /* Ensures responsiveness */
+}
+
+.styled-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 14px; /* Increased padding */
+  border: 1px solid #ddd;
+  text-align: left; /* Left-align text for better readability */
+  color: #444;
+}
+
+.styled-table th {
+  background-color: #333;
+  color: white;
+  font-size: 18px; /* Bigger font size */
+  text-align: center;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+  background-color: #e6f7ff;
+}
+
+/* Profile Section - Modern Look */
+.nprofile-section {
+  width: 320px;
+  background: linear-gradient(135deg, #3d3c48, #3d3e6e);
+  padding: 25px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 0; /* Change from 20px to 0 */
+  border-bottom-left-radius: 0; /* Change from 20px to 0 */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: fixed; /* Changed from relative to fixed */
+  top: 58px; /* Adjust if needed */
+  right: 0; /* Position it on the right side */
+  z-index: 10; /* Ensures it's above other content */
+  height: calc(100vh - 50px); /* Adjust height based on your header */
+}
+
+
+/* Profile Picture */
+.nprofile-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nprofile-pic:hover {
+  transform: scale(1.1);
+}
+
+/* Profile Name */
+.nprofile-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Profile Role */
+.nprofile-card p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Profile Info */
+.nprofile-info {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 0; /* Change from 12px to 0 */
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nprofile-info p {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff; 
+}
+
+.nprofile-info p strong {
+  font-weight: 600;
+  color: #ffd700; /* Highlight the labels with a gold color */
+}
+
+.nprofile-info p:last-child {
+  border-bottom: none;
+}
+
+.nprofile-info p strong {
+  font-weight: 600;
+}
+
+/* Profile Button */
+.nedit-profile {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: white;
+  color: #a19dea;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  cursor:pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.nedit-profile:hover {
+  background: #f8f9ff;
+  transform: translateY(-2px);
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nprofile-section {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .inventory-container {
+    width: 95%;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .nsidebar {
+    width: 200px;
+  }
+  .nmain-content {
+    left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nsidebar {
+    width: 60px; /* Shrink sidebar */
+    padding: 10px;
+  }
+
+  .nsidebar span {
+    display: none; /* Hide text labels in sidebar */
+  }
+
+  .nmain-content {
+    left: 60px; /* Adjust main content */
+    padding: 20px;
+  }
+
+  .nda-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nsidebar {
+    display: none; /* Hide sidebar completely */
+  }
+
+  .nmain-content {
+    left: 0; /* Full width */
+  }
+
+  .nda-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .nchat-button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ndashboard-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr)); /* Show 2 per row */
+  }
+
+  .ndashboard-btn.profile {
+    grid-column: span 2; /* Profile button takes full width in the row */
+  }
+}
+
+@media (max-width: 768px) {
+  .ndashboard-grid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Keep 2 per row */
+  }
+
+  .ndashboard-btn {
+    width: 160px;
+    height: 120px;
+  }
+
+  .ndashboard-btn.profile {
+    grid-column: span 2; /* Ensures profile remains centered */
+  }
+}
+
+@media (max-width: 480px) {
+  .ndashboard-grid {
+    grid-template-columns: repeat(1, minmax(140px, 1fr)); /* 1 per row */
+  }
+
+  .ndashboard-btn {
+    width: 140px;
+    height: 105px;
+  }
+
+  .ndashboard-btn.profile {
+    grid-column: span 1; /* Single button per row */
+  }
+}
