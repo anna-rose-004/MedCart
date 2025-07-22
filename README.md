@@ -33,9 +33,9 @@ In many hospitals, **nurses manually log expiry dates of medicines in crashcart*
 -  **Add Medicines**: QR code scanning for quick batch uploads
 -  **Dispense Medicines**: Only allowed if the item is not expired
 -  **Role-Based Access**:
-  - **Admin**: Manage users, roles, departments
-  - **Pharmacist**: Add/update medicines, assign to departments
-  - **Nurse**: Department-specific access to scan & dispense
+  -  **Admin**: Manage users, roles, departments
+  -  **Pharmacist**: Add/update medicines, assign to departments
+  -  **Nurse**: Department-specific access to scan & dispense
 -  **Expiry Alerts**: Notifications for expired or near-expiry medicines
 -  **Audit Logging**: All activities stored for future audits
 -  **Department-wise CrashCart Handling**
